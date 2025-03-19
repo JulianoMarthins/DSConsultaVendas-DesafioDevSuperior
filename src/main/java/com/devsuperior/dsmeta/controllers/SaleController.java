@@ -25,13 +25,28 @@ public class SaleController {
 
 	@GetMapping(value = "/report")
 	public ResponseEntity<?> getReport() {
-		// TODO
+		// TODO:
+		/*
+				A função deve receber nome, data inicial e data final
+				Esses dados não são obrigatórios
+				Caso o nome não seja inserido, o mesmo deve ser uma string vazia
+				Caso a data inicial não seja inserida, deve ser armazenada um ano antes da data atual
+				Caso a data final não seja inserida, deve ser armazenada a data atual do sistema
+
+		 */
 		return null;
 	}
 
 	@GetMapping(value = "/summary")
 	public ResponseEntity<?> getSummary() {
-		// TODO
+		// TODO:
+		/*
+				A função deve receber os dados de entrada, data inicial, data final e nome
+				Nenhum desses dados é obrigatório
+				Caso a data inicial não seja inserida, ela deve ser um ano antes da data final
+				Caso a data final não seja inserida, ela deve ser o dia atual do sistema
+				Caso o nome do vendedor não seja inserido, deve ser armazenado uma string vazia
+		 */
 		return null;
 	}
 }
