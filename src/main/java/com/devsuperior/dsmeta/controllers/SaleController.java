@@ -27,9 +27,9 @@ public class SaleController {
 
 	@GetMapping(value = "/report")
 	public ResponseEntity<Page<SaleReportDTO>> getReport(
-			@RequestParam(value="minDate", defaultValue = "") String minDate,
-			@RequestParam(value="maxDate", defaultValue = "") String maxDate,
-			@RequestParam(value = "name", defaultValue = "") String sellerName,
+			@RequestParam(value="minDate", required = false) String minDate,
+			@RequestParam(value="maxDate", required = false) String maxDate,
+			@RequestParam(value = "name", required = false) String sellerName,
 			Pageable pageable
 	) {
 
@@ -40,8 +40,8 @@ public class SaleController {
 
 	@GetMapping(value = "/summary")
 	public ResponseEntity<List<SaleSummaryDTO>> getSummary(
-			@RequestParam(value  ="minDate", defaultValue = "") String minDate,
-			@RequestParam(value = "maxDate", defaultValue = "") String maxDate
+			@RequestParam(value  ="minDate", required = false) String minDate,
+			@RequestParam(value = "maxDate", required = false) String maxDate
 	) {
 		List<SaleSummaryDTO> result = service.getSummary(minDate, maxDate);
 

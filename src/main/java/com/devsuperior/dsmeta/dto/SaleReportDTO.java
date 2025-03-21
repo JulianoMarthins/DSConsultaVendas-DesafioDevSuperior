@@ -9,10 +9,10 @@ import java.time.LocalDate;
 public class SaleReportDTO {
 
     // Atributos de classe
-    private Long id;
-    private LocalDate date;
-    private Double amount;
-    private String sellerName;
+    private final Long id;
+    private final LocalDate date;
+    private final Double amount;
+    private final String sellerName;
 
 
     // Construtores

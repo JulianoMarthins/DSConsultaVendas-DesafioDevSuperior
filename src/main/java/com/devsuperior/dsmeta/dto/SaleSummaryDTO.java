@@ -1,12 +1,12 @@
 package com.devsuperior.dsmeta.dto;
 
 
-import com.devsuperior.dsmeta.projections.SaleSummaryProjectuion;
+import com.devsuperior.dsmeta.projections.SaleSummaryProtection;
 
 public class SaleSummaryDTO {
 
     // Atributos de Classe
-    private String sellerName;
+    private final String sellerName;
     private Double total;
 
 
@@ -16,9 +16,9 @@ public class SaleSummaryDTO {
         this.total = total;
     }
 
-    public SaleSummaryDTO(SaleSummaryProjectuion projection){
+    public SaleSummaryDTO(SaleSummaryProtection projection){
         sellerName = projection.getSellerName();
-        Double total = projection.getTotal();
+        total = projection.getTotal();
     }
 
     // Getters

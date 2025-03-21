@@ -65,17 +65,20 @@ public class SaleService {
         LocalDate endDate;
 
         // Tratamento da data Máxima
-        if (!maxDate.isEmpty()) {
-            endDate = LocalDate.parse(maxDate);
-        } else {
+        if (maxDate == null) {
             endDate = LocalDate.ofInstant(Instant.now(), ZoneId.systemDefault());
+
+        } else {
+            endDate = LocalDate.parse(maxDate);
         }
 
         // Tratamento da data Mínima
-        if (!minDate.isEmpty()) {
-            startDate = LocalDate.parse(maxDate);
-        } else {
+        if (minDate == null) {
             startDate = endDate.minusYears(1L);
+
+        } else {
+            startDate = LocalDate.parse(minDate);
+
         }
 
         // Retorna vetor com duas datas com indices 0 para startDate e 1 para endDate

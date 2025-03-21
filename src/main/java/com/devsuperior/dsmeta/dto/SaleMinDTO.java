@@ -7,9 +7,9 @@ import java.time.LocalDate;
 public class SaleMinDTO {
 
 	// Atributos de Classe
-	private Long id;
-	private Double amount;
-	private LocalDate date;
+	private final Long id;
+	private final Double amount;
+	private final LocalDate date;
 
 	// Construtores
 	public SaleMinDTO(Long id, Double amount, LocalDate date) {
