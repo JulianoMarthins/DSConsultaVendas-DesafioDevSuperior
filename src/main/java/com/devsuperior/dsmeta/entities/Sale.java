@@ -3,13 +3,13 @@ package com.devsuperior.dsmeta.entities;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "tb_sales")
+@Entity // Define classe como tabela no banco de dados
+@Table(name = "tb_sales") // Nomeia a tabela no banco de dados
 public class Sale {
 
     // Atributos de Classe
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id // Define o proximo atributo como chave primária do banco de dados
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Cria a chave primaria automaticamente conforme ordem de criaçaõ
     private Long id;
     private Integer visited;
     private Integer deals;
@@ -18,8 +18,8 @@ public class Sale {
 
 
     // Relacionamentos
-    @ManyToOne
-    @JoinColumn(name = "seller_id")
+    @ManyToOne // Define que a classe Sale tem relacionamento de muitos para um com a classe Seller
+    @JoinColumn(name = "seller_id") // Cria coluna na tabela do banco de dados com o nome seller_id
     private Seller seller;
 
 

@@ -4,20 +4,21 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name = "tb_seller")
+@Entity // Define que esta classe será uma tabela no banco de dados
+@Table(name = "tb_seller") // Nomeia a tabela do banco de dados
 public class Seller {
 
     // Atributos de Classe
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id // Define o próximo atributo como chave primária do banco de dados
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Cria automaticamente por indentação as chaves primarias
     private Long id;
     private String name;
     private String email;
     private String phone;
 
     // Relacionamentos
-    @OneToMany(mappedBy = "seller")
+    @OneToMany(mappedBy = "seller") // Cria relacionamento da classe Seller de um para muitos com o Sale, sendo esta relação
+    // O atributo sales da classe Sale
     private List<Sale> sales = new ArrayList<>();
 
     // Construtores
