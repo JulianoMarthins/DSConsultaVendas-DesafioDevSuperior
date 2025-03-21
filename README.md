@@ -58,13 +58,5 @@ As mesmas do caso de uso do relatório de vendas
 
 <div align="center">
 
-## Como o trabalho será corrigido
-
-1) Importação do projeto: O professor deverá ser capaz de clonar o projeto do GitHub, importar e executar o mesmo 
-na IDE sem necessidade de qualquer configuração
-2) Testes manuais do projeto: O professor terá preparado em seu computador as requisições específicas no postman
-
-</div>
-
 
 ---
